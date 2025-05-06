@@ -21,7 +21,7 @@ evaluateDice randomGen die@Dice{..} tmpSum =
         evaluateDice newRandomGen Dice{count=count-1,maxValue=maxValue} (tmpSum  + currentValue)
 
 evaluateExpression :: RandomGen a => a -> Expression -> (Int, a)
-evaluateExpression rg (ExpDie dice) = evaluateDice rg dice 0
+evaluateExpression rg (ExpDice dice) = evaluateDice rg dice 0
 evaluateExpression rg (ExpConst value) = (value, rg)
 evaluateExpression rg (ExpAdd expr1 expr2) = evaluateWithOperator rg expr1 expr2 (+)
 evaluateExpression rg (ExpSub expr1 expr2) = evaluateWithOperator rg expr1 expr2 (-)

@@ -7,7 +7,7 @@ data Dice = Dice
     } deriving Show
 
 data Expression =
-    ExpDie Dice |
+    ExpDice Dice |
     ExpConst Int |
     ExpAdd Expression Expression |
     ExpSub Expression Expression |
@@ -24,7 +24,7 @@ printDie die = show (count die) ++
     show (maxValue die)
 
 printExpr :: Expression -> String
-printExpr (ExpDie dice) = printDie dice
+printExpr (ExpDice dice) = printDie dice
 printExpr (ExpConst value) = show value
 printExpr (ExpAdd expr1 expr2) = printExpr expr1 ++ "+" ++ printExpr expr2
 printExpr (ExpSub expr1 expr2) = printExpr expr1 ++ "-" ++ printExpr expr2
