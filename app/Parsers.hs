@@ -9,7 +9,7 @@ import Text.Megaparsec hiding (State, count)
 import qualified Text.Megaparsec 
 import qualified Text.Megaparsec.Char as MPC
 import qualified Control.Monad.Combinators.Expr as Exp
---import qualified Data.Text as T
+import qualified Data.Text as T
 import qualified Text.Megaparsec.Char.Lexer as Lex
 import Types
 import Control.Monad (void)

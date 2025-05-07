@@ -35,4 +35,3 @@ printExpr (ExpMin expr1 expr2) = printExpr expr1 ++ "v" ++ printExpr expr2
 printExpr (ExpParenthesis expr ) = "(" ++ printExpr expr ++ ")"
 
 
-
